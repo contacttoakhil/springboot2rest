@@ -20,7 +20,7 @@ public class EmployeeResource {
     }
 
     @GetMapping("/employees/{id}")
-    public Employee getStudent(@PathVariable long id) {
+    public Employee getEmployee(@PathVariable long id) {
         Optional<Employee> employee = employeeRepository.findById(id);
 
         if (!employee.isPresent())
@@ -35,8 +35,8 @@ public class EmployeeResource {
     }
 
     @PostMapping("/employees")
-    public ResponseEntity<Object> createStudent(@RequestBody Employee student) {
-        Employee savedEmployee = employeeRepository.save(student);
+    public ResponseEntity<Object> createEmployee(@RequestBody Employee employee) {
+        Employee savedEmployee = employeeRepository.save(employee);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(savedEmployee.getId()).toUri();
@@ -46,7 +46,7 @@ public class EmployeeResource {
     }
 
     @PutMapping("/employees/{id}")
-    public ResponseEntity<Object> updateStudent(@RequestBody Employee employee, @PathVariable long id) {
+    public ResponseEntity<Object> updateEmployee(@RequestBody Employee employee, @PathVariable long id) {
 
         Optional<Employee> optionalEmployee = employeeRepository.findById(id);
 
