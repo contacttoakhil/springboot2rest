@@ -1,4 +1,4 @@
-# Start with a base image containing JAVA runtime
+# Start with a base image containing JAVA 8 runtime
 FROM openjdk:8
 
 # Add maintainer info (Label is used to add metadata)
@@ -7,7 +7,7 @@ LABEL MAINTAINER="contacttoakhil123@gmail.com"
 #Add a volume pointing to /tmp
 VOLUME /tmp
 
-# Make por 8085 available to the world outside this container
+# Make port 8085 available to the world outside this container
 EXPOSE 8085
 
 # The jar file path of the application
@@ -19,8 +19,8 @@ ADD ${JAR_FILE} spring-boot2-docker.jar
 # Run the jar file
 ENTRYPOINT ["java", "-jar" , "spring-boot2-docker.jar"]
 
-# In the above Dockerfile, we created a mount point with path /tmp because this is where the spring boot application creates working directories for Tomcat by default. Although it’s not required for this spring boot application because who cares
-# about tomcat directories. But if we want to store stuff like tomcat access logs, then VOLUMES are very useful.
+# In the above Dockerfile, we created a mount point with path /tmp because this is where the spring boot application creates working directories for Tomcat by default.
+# If we want to store stuff like tomcat access logs, then VOLUMES are very useful.
 # More: https://docs.docker.com/storage/volumes/
 
 # Building docker image
