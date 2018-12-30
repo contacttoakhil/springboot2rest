@@ -15,5 +15,10 @@ mvn clean install package
 2. Build image: docker build -t spring-boot2-docker .
 3. Run the image: docker run -p 8085:8085 spring-boot2-docker
 
+## Deploying into Docker container using docker-compose
+1. Create executable jar using 'mvn clean package'
+2. Create image and deploy in container using 'docker-compose up -d'
+3. Then you can check docker container info using 'docker ps'
+
 ## Testing via postman: 
 GET:http://localhost:8085/employees
