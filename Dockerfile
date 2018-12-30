@@ -1,5 +1,5 @@
 # Start with a base image containing JAVA 8 runtime
-FROM openjdk:8
+FROM openjdk:11-jre-slim
 
 # Add maintainer info (Label is used to add metadata)
 LABEL MAINTAINER="contacttoakhil123@gmail.com"
