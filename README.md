@@ -5,10 +5,10 @@ This is a simple Spring Boot 2.0 Application which expose a simple rest API base
 There are various ways to [run](https://dzone.com/articles/five-ways-of-running-spring-boot-application) spring boot applications.
 
 ## Running via maven plugin
-mvn sprint-boot:run
+mvn spring-boot:run
 
 ## Package into executable jar
-mvn clean package
+mvn clean install package
 
 ## Deploying into Docker container
 1. Create executable jar
