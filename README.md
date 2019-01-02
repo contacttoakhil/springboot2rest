@@ -1,5 +1,5 @@
 # springboot2rest
-This is a simple Spring Boot 2.0 Application which expose a simple rest API using in-memory database [H2](https://en.wikipedia.org/wiki/H2_(DBMS)) and Spring JPA. It uses JDK 11 and Docker.
+This is a simple [Spring Boot 2.0](https://spring.io/blog/2018/11/30/spring-boot-2-1-1-available-now) Application which expose a simple rest API using in-memory database [H2](https://en.wikipedia.org/wiki/H2_(DBMS)) and [Spring JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/). It uses [JDK 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) and [Docker](https://www.docker.com/).
 
 ## Running Spring Boot Application
 There are various ways to [run](https://dzone.com/articles/five-ways-of-running-spring-boot-application) spring boot applications.
